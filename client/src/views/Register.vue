@@ -2,7 +2,7 @@
   <div class="register">
     <section class="form_container">
       <div class="manage_tip">
-        <span class="title">米修在线后台管理系统</span>
+        <span class="title">草莓在线后台管理系统</span>
         <el-form ref="registerForm" :model="registerUser" status-icon :rules="rules" label-width="80px"
           class="registerForm">
           <el-form-item label="用户名" prop="name">
