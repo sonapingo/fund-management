@@ -23,7 +23,6 @@
               <el-option label="员工" value="employee" />
             </el-select>
           </el-form-item>
-
           <el-form-item>
             <el-button type="primary" class="submit_btn" @click="submitForm('registerForm')">注册</el-button>
           </el-form-item>
