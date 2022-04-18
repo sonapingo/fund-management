@@ -2,7 +2,6 @@ const express = require("express")
 const router = express.Router()
 const bcrypt = require("bcryptjs")
 const jwt = require('jsonwebtoken')
-const gravatar = require("gravatar")
 const keys = require("../../config/keys")
 const passport = require("passport")
 
@@ -18,11 +17,10 @@ router.post("/register", (req, res) => {
             if (user) {
                 return res.status(400).json("邮箱已经注册")
             } else {
-                const avatar = gravatar.url(req.body.email, { s: '200', r: 'pg', d: 'mm' })
                 const newUser = new User({
                     name: req.body.name,
                     email: req.body.email,
-                    avatar,
+                    avatar: "D:\\javascript\\fund-management\\projects\\node-demo\\node-vue-ele-app\\client\\src\\assets\\none.png",
                     password: req.body.password,
                     identity: req.body.identity
                 })
